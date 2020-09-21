@@ -8,11 +8,7 @@ import Hero from "../components/Hero"
 import Contact from "../components/ContactUs"
 import Footer from "../components/Footer"
 
-const MenuPage = ({
-  data: {
-    allDatoCmsMenu: { nodes },
-  },
-}) => {
+const MenuPage = ({}) => {
   return (
     <Layout>
       <SEO title="Dzwoneczek | karda" />
@@ -22,20 +18,5 @@ const MenuPage = ({
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    allDatoCmsMenu(sort: { fields: pos, order: ASC }) {
-      nodes {
-        breakfast
-        date(formatString: "DD-MM-YYYY")
-        day
-        dinner
-        tea
-        pos
-      }
-    }
-  }
-`
 
 export default MenuPage

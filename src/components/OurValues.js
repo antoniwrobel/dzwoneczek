@@ -20,8 +20,6 @@ const cards = [
 ]
 
 const OurValues = () => {
-  return <>test</>
-
   const data = useStaticQuery(query)
 
   const {
