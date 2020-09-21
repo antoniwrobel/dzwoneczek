@@ -20,23 +20,13 @@ const cards = [
 ]
 
 const OurValues = () => {
+  return <>test</>
+
   const data = useStaticQuery(query)
-
-  const [mobile, setMobile] = useState(false)
-
-  useEffect(() => {
-    setMobile(window.innerWidth <= 1019)
-  }, [])
-
-  const createTitle = (title) => ({
-    __html: mobile ? title.replace("<br/>", "") : title,
-  })
 
   const {
     allFile: { nodes },
   } = data
-
-  console.log(nodes)
 
   return (
     <O.Wrapper className={wrapper}>
