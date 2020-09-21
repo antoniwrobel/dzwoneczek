@@ -28,7 +28,7 @@
 
 .separator {
   color: #5a331a;
-  font-family: "Luckiest Guy", cursive;
+  /* font-family: "Luckiest Guy", cursive; */
   font-size: 62px;
   font-weight: 800;
   line-height: 55px;
