@@ -1,0 +1,92 @@
+.headerImage {
+  position: relative;
+  top: -1px;
+}
+
+.barImage {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  max-width: 62.5%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.navbar {
+  position: relative;
+  top: -50px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  color: #f9bf81;
+  font-size: 25px;
+}
+
+.separator {
+  color: #5a331a;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 55px;
+  background: #fff;
+  padding: 0 20px;
+}
+
+.separatorWrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+
+.separator::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #5a331a;
+  top: 30px;
+  z-index: -2;
+}
+
+@media (min-width: 1440px) {
+  .navbar {
+    top: -60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .navbar {
+    top: -70px;
+    height: 70px;
+  }
+}
+
+.navbar ul {
+  display: flex;
+  width: 100%;
+  padding: 0 50px;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.navbar li {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.navbar a {
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

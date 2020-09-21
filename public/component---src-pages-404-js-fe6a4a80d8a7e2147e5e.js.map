@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.js"],"names":["ErrorPage"],"mappings":"2FAAA,gCAMeA,UAJG,WAChB,OAAO","file":"component---src-pages-404-js-fe6a4a80d8a7e2147e5e.js","sourcesContent":["import React from \"react\"\n\nconst ErrorPage = () => {\n  return <div>page not found</div>\n}\n\nexport default ErrorPage\n"],"sourceRoot":""}

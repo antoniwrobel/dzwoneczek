@@ -1,0 +1,14 @@
+.backgroundImg {
+  max-width: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-reapeat;
+  margin: 0 auto;
+}
+
+@media (max-width: 1019px) {
+  .backgroundImg {
+    height: 200px !important;
+  }
+}

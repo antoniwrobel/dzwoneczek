@@ -1,0 +1,216 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: Saira Semi Condensed;
+}
+strong {
+  font-weight: 600;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #333;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
+  font-weight: 900;
+}
+
+h2 {
+  width: 100%;
+  display: flex;
+  font-size: 44px;
+  font-weight: 900;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .swiper-button-prev {
+  background-image: url(../images/left-arrow.png) !important;
+  width: 51px;
+  background-size: auto;
+  height: 51px;
+  left: 15%;
+}
+
+main .swiper-button-prev::after {
+  content: "";
+}
+
+main .swiper-button-next {
+  background-image: url(../images/right-arrow.png) !important;
+  width: 51px;
+  background-size: auto;
+  height: 51px;
+  right: 15%;
+}
+
+main .swiper-button-next::after {
+  content: "";
+}
+
+.gallery-swiper {
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-swiper .swiper-slide {
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0;
+  max-height: 270px;
+  max-width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#g-recaptcha {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 1019px) {
+  .gatsby-image-wrapper {
+    max-width: 100%;
+  }
+
+  .gallery-swiper {
+    min-height: 200px;
+    padding: 30px 0;
+  }
+}

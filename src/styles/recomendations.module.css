@@ -1,0 +1,139 @@
+.wrapper {
+  width: 100%;
+  padding: 0px 50px;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 999;
+  width: calc(100% - 40px);
+}
+
+.wrapper::before {
+  position: absolute;
+  content: "";
+  top: -50px;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  background: #fff;
+  z-index: 1;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.wrapper::after {
+  position: absolute;
+  content: "";
+  bottom: -50px;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  background: #fff;
+  z-index: 1;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.upper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  justify-content: space-between;
+  max-width: 75%;
+}
+
+.img {
+  width: 95px;
+  height: 95px;
+  border-radius: 95px;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  max-width: calc(100% / 3);
+}
+
+.swiper {
+  width: 100%;
+  display: flex;
+}
+
+.name {
+  font-size: 24px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 150px;
+}
+
+.small {
+  color: #9d9b9b;
+  font-size: 15px;
+  margin: 5px 0 10px;
+  letter-spacing: -0.72px;
+}
+
+.image {
+  width: 20px;
+  margin-right: 2px;
+}
+
+.hearts {
+  display: flex;
+}
+
+.desc {
+  color: #545454;
+  margin-top: 20px;
+  font-style: italic;
+  line-height: 20px;
+  max-width: 75%;
+}
+
+@media (max-width: 1019px) {
+  .wrapper {
+    margin-top: 0px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 0 #dedede;
+    max-width: 350px;
+  }
+
+  .wrapper::before,
+  .wrapper::after {
+    content: none;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .upper {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,17 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  min-height: 250px;
+}
+
+.container h2 {
+  justify-content: center;
+}
+
+@media (max-width: 1019px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
