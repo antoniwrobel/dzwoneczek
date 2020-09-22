@@ -18,6 +18,11 @@ import {
 
 import * as R from "../styled/Recomendations/styles"
 
+const defParams = {
+  spaceBetween: 55,
+  loop: true,
+}
+
 const Recomendations = () => {
   const [mobile, setMobile] = useState(false)
   const [params, setParams] = useState({})
@@ -28,8 +33,8 @@ const Recomendations = () => {
 
   useEffect(() => {
     setParams({
+      ...defParams,
       slidesPerView: mobile ? 1 : 3,
-      spaceBetween: 55,
     })
   }, [mobile])
 
@@ -42,41 +47,32 @@ const Recomendations = () => {
     return <R.Empty />
   }
 
+  if (!Object.keys(params).length) return <></>
+
   return (
     <R.Wrapper className={wrapper}>
       <R.SwiperEl {...params} className={swiper}>
-        {nodes.map(
-          ({ originalId, fullName, role, rating, description }, index) => {
-            const heartQ = [...Array(rating)]
+        {nodes.map(({ originalId, fullName, role, rating, description }, index) => {
+          const heartQ = [...Array(rating)]
 
-            return (
-              <R.Card className={card} key={originalId}>
-                <R.Upper className={upper}>
-                  <R.Img
-                    className={img}
-                    src={nodes[index].picture.fixed.src}
-                    alt="user photo"
-                  />
-                  <R.UserDetails className={userDetails}>
-                    <R.Name className={name}>{fullName}</R.Name>
-                    <R.Small className={small}>{role}</R.Small>
-                    <R.Hearts className={hearts}>
-                      {heartQ.map((_, idx) => (
-                        <Image
-                          key={idx}
-                          className={image}
-                          fixed={heartImg.childImageSharp.fixed}
-                          alt="heart image"
-                        />
-                      ))}
-                    </R.Hearts>
-                  </R.UserDetails>
-                </R.Upper>
-                <R.Desc className={desc}>{description}</R.Desc>
-              </R.Card>
-            )
-          }
-        )}
+          return (
+            <R.Card className={card} key={originalId}>
+              <R.Upper className={upper}>
+                <R.Img className={img} src={nodes[index].picture.fixed.src} alt="user photo" />
+                <R.UserDetails className={userDetails}>
+                  <R.Name className={name}>{fullName}</R.Name>
+                  <R.Small className={small}>{role}</R.Small>
+                  <R.Hearts className={hearts}>
+                    {heartQ.map((_, idx) => (
+                      <Image key={idx} className={image} fixed={heartImg.childImageSharp.fixed} alt="heart image" />
+                    ))}
+                  </R.Hearts>
+                </R.UserDetails>
+              </R.Upper>
+              <R.Desc className={desc}>{description}</R.Desc>
+            </R.Card>
+          )
+        })}
       </R.SwiperEl>
     </R.Wrapper>
   )

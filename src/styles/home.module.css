@@ -7,6 +7,13 @@
   margin: 0 auto;
 }
 
+.recomendationWrapper {
+  background: #fff498;
+  top: -80px;
+  padding: 140px 0;
+  position: relative;
+}
+
 @media (max-width: 1019px) {
   .backgroundImg {
     height: 200px !important;

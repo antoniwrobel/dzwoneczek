@@ -13,6 +13,8 @@ import Footer from "../components/Footer"
 
 import HeaderSeparator from "../components/HeaderSeparator"
 
+import { recomendationWrapper } from "../styles/home.module.css"
+
 const HomePage = () => {
   return (
     <Layout>
@@ -20,7 +22,10 @@ const HomePage = () => {
       <Hero />
       <HeaderSeparator value="o nas" />
       <AboutUs />
-      {/* <Recomendations /> */}
+      <HeaderSeparator value="rekomendacje" bg="#fff498" />
+      <div className={recomendationWrapper}>
+        <Recomendations />
+      </div>
       {/* <AboutUs /> */}
       {/* <Gallery /> */}
       {/* <Footer /> */}

@@ -32,11 +32,11 @@
   font-size: 62px;
   font-weight: 800;
   line-height: 55px;
-  background: #fff;
   padding: 0 20px;
 }
 
 .separatorWrapper {
+  z-index: 1;
   display: flex;
   width: 100%;
   position: relative;

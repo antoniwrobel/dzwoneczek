@@ -1,13 +1,10 @@
 .wrapper {
   width: 100%;
-  padding: 0px 50px;
   box-sizing: border-box;
   position: relative;
-  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -15,38 +12,6 @@
   margin: 0 auto;
   z-index: 999;
   width: calc(100% - 40px);
-}
-
-.wrapper::before {
-  position: absolute;
-  content: "";
-  top: -50px;
-  left: 0;
-  box-sizing: border-box;
-  padding: 0 20px;
-  width: 100%;
-  height: 50px;
-  border-radius: 40px;
-  background: #fff;
-  z-index: 1;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.wrapper::after {
-  position: absolute;
-  content: "";
-  bottom: -50px;
-  left: 0;
-  box-sizing: border-box;
-  padding: 0 20px;
-  width: 100%;
-  height: 50px;
-  border-radius: 40px;
-  background: #fff;
-  z-index: 1;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .upper {
@@ -66,6 +31,7 @@
 .userDetails {
   display: flex;
   flex-direction: column;
+  margin-left: 30px;
 }
 
 .card {
@@ -87,7 +53,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  max-width: 150px;
+  /* max-width: 150px; */
 }
 
 .small {

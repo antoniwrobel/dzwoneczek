@@ -19,7 +19,7 @@ import {
 
 function encode(data) {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
 }
 
@@ -33,11 +33,11 @@ const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
     setMobile(window.innerWidth <= 1019)
   }, [])
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const form = e.target
 
@@ -54,10 +54,10 @@ const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
+      .catch((error) => alert(error))
   }
 
-  const verifyCallback = response => {
+  const verifyCallback = (response) => {
     if (response) {
       setValid(true)
     }
@@ -67,19 +67,10 @@ const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
 
   const data = useStaticQuery(query)
 
-  const fontSize = fromSpecialPage
-    ? mobile
-      ? "35"
-      : "48"
-    : mobile
-    ? "50"
-    : "62"
+  const fontSize = fromSpecialPage ? (mobile ? "35" : "48") : mobile ? "50" : "62"
 
   return (
-    <C.Wrapper
-      className={wrapper}
-      bg={!fromSpecialPage && data.file.childImageSharp.fluid.src}
-    >
+    <C.Wrapper className={wrapper} bg={!fromSpecialPage && data.file.childImageSharp.fluid.src}>
       <C.Container className={container}>
         <C.Header className={header} fontSize={fontSize}>
           {title || "Skontaktuj się z nami"}
@@ -109,37 +100,21 @@ const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
             </C.InputWrap>
             <C.InputWrap className={inputWrap}>
               <label htmlFor="company">Nazwa firmy:</label>
-              <input
-                type="input"
-                name="company"
-                required
-                onChange={handleChange}
-              />
+              <input type="input" name="company" required onChange={handleChange} />
             </C.InputWrap>
             <C.InputWrap className={inputWrap}>
               <label htmlFor="email">Adres email:</label>
-              <input
-                type="email"
-                name="email"
-                required
-                onChange={handleChange}
-              />
+              <input type="email" name="email" required onChange={handleChange} />
             </C.InputWrap>
           </C.Inputs>
           <C.InputWrap className={`${inputWrap} ${textareaWrap}`}>
             <label htmlFor="message">Treść zapytania:</label>
-            <textarea
-              type="text"
-              name="message"
-              required
-              className={textarea}
-              onChange={handleChange}
-            />
+            <textarea type="text" name="message" required className={textarea} onChange={handleChange} />
           </C.InputWrap>
           <input data-netlify-recaptcha="true" className={hidden} hidden />
 
           <Recaptcha
-            sitekey="6LfpRcUZAAAAAIausgzTD112UykaV-htRb4ZGrcA"
+            sitekey="6LexS88ZAAAAAOOCIg4u_1b6xAkZKN3NKTV3yiu3"
             render="explicit"
             verifyCallback={verifyCallback}
             onloadCallback={onloadCallback}
