@@ -28,11 +28,11 @@
 
 .separator {
   color: #5a331a;
-  /* font-family: "Luckiest Guy", cursive; */
+  font-family: "Luckiest Guy", cursive;
   font-size: 62px;
   font-weight: 800;
-  line-height: 55px;
   padding: 0 20px;
+  text-transform: uppercase;
 }
 
 .separatorWrapper {
@@ -41,6 +41,7 @@
   width: 100%;
   position: relative;
   justify-content: center;
+  top: 20px;
 }
 
 .separator::after {
@@ -50,7 +51,7 @@
   width: 100%;
   height: 4px;
   background: #5a331a;
-  top: 30px;
+  top: 25px;
   z-index: -2;
 }
 

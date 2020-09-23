@@ -47,6 +47,12 @@
   font-weight: 600;
 }
 
+@media (min-width: 1920px) {
+  .titleHeader {
+    top: -65px;
+  }
+}
+
 @media (max-width: 1019px) {
   .wrapper {
     flex-direction: column;

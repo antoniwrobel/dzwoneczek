@@ -9,8 +9,13 @@
 
 .recomendationWrapper {
   background: #fff498;
-  top: -80px;
-  padding: 140px 0;
+  padding: 80px 0;
+  position: relative;
+}
+
+.galleryWrapper {
+  background: #e1fe8a;
+  padding: 80px 0;
   position: relative;
 }
 

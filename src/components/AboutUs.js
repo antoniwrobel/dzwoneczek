@@ -49,30 +49,39 @@ const articles = [
     logorytmikę, zajęcia korekcyjne. 
   `,
   },
-  // {
-  //   id: 2,
-  //   title: "Nasza oferta",
-  //   alt: "kids having fun",
-  //   description: `Nasza oferta obejmuje dwa pakiety żywienia dostarczane
-  //   codziennie do placówek oświatowych. Naszym klientom dajemy
-  //   do wyboru pakiet dwu lub trzy posiłkowy. <span style="color:${YELLOW};">W przypadku pakietu
-  //   3-posiłkowego dodajemy do zamówień gratisowe napoje dla
-  //   każdego dziecka.</span>
-  //   <br/>
-  // <br/>
-  //   Szczegółowe warunki oferty, takie jak preferowane jadłospsy,
-  //   harmonogramy dostaw, wykluczenia produktów oraz listę
-  //   alergenów - uzgadniami indywidualnie z kierownictwem
-  //   danej placówki. <span style="color:${BLUE};">Jesteśmy elastyczni i otwarci na propozycję,
-  //   staramy się ograniczyć liczbę mogących pojawić się podczas
-  //   współpracy problemów do minimum.</span> Zapoznaj się z naszą ofertą
-  //   lub skontaktuj się z nami aby poznać szczegóły.`,
-  // },
+  {
+    id: 2,
+    title: "Nasza oferta",
+    alt: "kids having fun",
+    description: `<strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
+    oferuje dzieciom niepełnosprawnym szereg terapii
+    prowadzonych przez wykfalifikowany personel.
+    <br/>
+    <br/>
+
+    <strong>Lista prowadzonych przez nas terapii:</strong>
+    
+    <ul>
+      <li>• Terapia psychologiczna</li>
+      <li>• Terapia logopedyczna</li>
+      <li>• Terapia integracji sensorycznej</li>
+      <li>• Fizjoterapia</li>
+      <li>• Terapia pedagogiczna</li>
+      <li>• Terapia behawioralna</li>
+      <li>• Terapia ręki</li>
+      <li>• Dogoterapia</li>
+      <li>• Trening umiejętności społecznych</li>
+      <li>• Sensoplastyka</li>
+      <li>• Bajkoterapia</li>
+      <li>• Muzykoterapia</li>
+    </ul>
+    `,
+  },
 ]
 
 const createDesc = (desc) => ({ __html: desc })
 
-const AboutUs = () => {
+const AboutUs = ({ second }) => {
   const data = useStaticQuery(query)
   const {
     allFile: { nodes },
@@ -82,10 +91,11 @@ const AboutUs = () => {
     <A.Wrapper className={wrapper} id="o-nas">
       <A.Articles>
         {articles.map(({ id, title, description, alt }, index) => {
+          if (!second && index === 1) return
+          if (second && index === 0) return
           return (
             <A.Article key={id} className={article}>
-              {title && <A.HeaderSmall className={headerSmall}>{title}</A.HeaderSmall>}
-              <A.Content className={`${content} ${index === 1 ? lastContent : null}`}>
+              <A.Content className={`${content} ${second ? lastContent : null}`}>
                 <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
                 <Image fluid={nodes[index].childImageSharp.fluid} alt={alt} className={image} />
               </A.Content>

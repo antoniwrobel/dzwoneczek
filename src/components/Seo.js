@@ -7,12 +7,7 @@ const SEO = ({ title, description, image, swiper, captcha }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
-  const {
-    defaultTitle,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata
+  const { defaultTitle, defaultDescription, siteUrl, defaultImage } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
@@ -30,22 +25,16 @@ const SEO = ({ title, description, image, swiper, captcha }) => {
 
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
+      {seo.description && <meta property="og:description" content={seo.description} />}
       {seo.image && <meta property="og:image" content={seo.image} />}
       {seo.title && <meta name="twitter:title" content={seo.title} />}
 
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
-      )}
+      {seo.description && <meta name="twitter:description" content={seo.description} />}
 
       {swiper && (
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
-        ></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"></link>
       )}
+      <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"></link>
     </Helmet>
     //  highlight-end
   )
