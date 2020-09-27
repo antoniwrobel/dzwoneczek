@@ -10,7 +10,7 @@ const Footer = (props) => {
     allFile: { nodes },
   } = data
 
-  const [index, white] = nodes
+  const [white, index] = nodes
   const footerVersion = props.white ? white : index
   return <Image fluid={footerVersion.childImageSharp.fluid} alt="footer" />
 }
