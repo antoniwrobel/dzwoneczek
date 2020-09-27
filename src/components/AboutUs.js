@@ -53,28 +53,7 @@ const articles = [
     id: 2,
     title: "Nasza oferta",
     alt: "kids having fun",
-    description: `<strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
-    oferuje dzieciom niepełnosprawnym szereg terapii
-    prowadzonych przez wykfalifikowany personel.
-    <br>
-    <br>
-
-    <strong>Lista prowadzonych przez nas terapii:</strong>
-    
-    <ul>
-      <li>• Terapia psychologiczna</li>
-      <li>• Terapia logopedyczna</li>
-      <li>• Terapia integracji sensorycznej</li>
-      <li>• Fizjoterapia</li>
-      <li>• Terapia pedagogiczna</li>
-      <li>• Terapia behawioralna</li>
-      <li>• Terapia ręki</li>
-      <li>• Dogoterapia</li>
-      <li>• Trening umiejętności społecznych</li>
-      <li>• Sensoplastyka</li>
-      <li>• Bajkoterapia</li>
-      <li>• Muzykoterapia</li>
-    </ul>
+    description: `
     `,
   },
 ]
@@ -96,7 +75,27 @@ const AboutUs = ({ second }) => {
           return (
             <A.Article key={id} className={article}>
               <A.Content className={`${content} ${second ? lastContent : null}`}>
-                <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
+                <A.Description className={desc}>
+                  <strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
+                  oferuje dzieciom niepełnosprawnym szereg terapii prowadzonych przez wykfalifikowany personel.
+                  <br />
+                  <br />
+                  <strong>Lista prowadzonych przez nas terapii:</strong>
+                  <ul>
+                    <li>• Terapia psychologiczna</li>
+                    <li>• Terapia logopedyczna</li>
+                    <li>• Terapia integracji sensorycznej</li>
+                    <li>• Fizjoterapia</li>
+                    <li>• Terapia pedagogiczna</li>
+                    <li>• Terapia behawioralna</li>
+                    <li>• Terapia ręki</li>
+                    <li>• Dogoterapia</li>
+                    <li>• Trening umiejętności społecznych</li>
+                    <li>• Sensoplastyka</li>
+                    <li>• Bajkoterapia</li>
+                    <li>• Muzykoterapia</li>
+                  </ul>
+                </A.Description>
                 <Image fluid={nodes[index].childImageSharp.fluid} alt={alt} className={image} />
               </A.Content>
             </A.Article>
