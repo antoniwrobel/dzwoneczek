@@ -22,7 +22,6 @@ const HomePage = () => {
       <Hero />
       <HeaderSeparator value="o nas" />
       <AboutUs />
-
       <div className={recomendationWrapper}>
         <HeaderSeparator value="rekomendacje" bg="#fff498" top="-50px" />
         <Recomendations />

@@ -58,23 +58,21 @@ const articles = [
     prowadzonych przez wykfalifikowany personel.
     <br/>
     <br/>
-
     <strong>Lista prowadzonych przez nas terapii:</strong>
-    
-    <ul>
-      <li>• Terapia psychologiczna</li>
-      <li>• Terapia logopedyczna</li>
-      <li>• Terapia integracji sensorycznej</li>
-      <li>• Fizjoterapia</li>
-      <li>• Terapia pedagogiczna</li>
-      <li>• Terapia behawioralna</li>
-      <li>• Terapia ręki</li>
-      <li>• Dogoterapia</li>
-      <li>• Trening umiejętności społecznych</li>
-      <li>• Sensoplastyka</li>
-      <li>• Bajkoterapia</li>
-      <li>• Muzykoterapia</li>
-    </ul>
+    <div style="display: flex; flex-direction: column;">
+    <span>• Terapia psychologiczna</span>
+    <span>• Terapia logopedyczna</span>
+    <span>• Terapia integracji sensorycznej</span>
+    <span>• Fizjoterapia</span>
+    <span>• Terapia pedagogiczna</span>
+    <span>• Terapia behawioralna</span>
+    <span>• Terapia ręki</span>
+    <span>• Dogoterapia</span>
+    <span>• Trening umiejętności społecznych</span>
+    <span>• Sensoplastyka</span>
+    <span>• Bajkoterapia</span>
+    <span>• Muzykoterapia</span>  
+    <div>
     `,
   },
 ]
@@ -93,7 +91,7 @@ const AboutUs = ({ second }) => {
         {articles.map(({ id, title, description, alt }, index) => {
           if (!second && index === 1) return
           if (second && index === 0) return
-          console.log(description)
+
           return (
             <A.Article key={id} className={article}>
               <A.Content className={`${content} ${second ? lastContent : null}`}>

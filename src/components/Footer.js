@@ -2,8 +2,6 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 
-import { wrapper, container, columnsWrapper, column } from "../styles/footer.module.css"
-
 const Footer = (props) => {
   const data = useStaticQuery(query)
   const {
@@ -13,12 +11,14 @@ const Footer = (props) => {
   const [white, index] = nodes
   const footerVersion = props.white ? white : index
 
+  console.log(nodes)
+
   return <Image fluid={footerVersion.childImageSharp.fluid} alt="footer" />
 }
 
 const query = graphql`
   {
-    allFile(filter: { dir: { regex: "/footer/" } }, sort: { order: DESC, fields: sourceInstanceName }) {
+    allFile(filter: { dir: { regex: "/footer/" } }, sort: { fields: relativePath, order: ASC }) {
       nodes {
         childImageSharp {
           fluid(quality: 100) {
