@@ -10,6 +10,7 @@ import HeaderSeparator from "../components/HeaderSeparator"
 import Recomendations from "../components/Recomendations"
 
 import { recomendationWrapper, crewWrapper } from "../styles/home.module.css"
+import AboutUsTwo from "../components/AboutUsTwo"
 
 const createDesc = (desc) => {
   return {
@@ -24,7 +25,6 @@ const CrewPage = ({ data }) => {
   const {
     allDatoCmsCrew: { nodes },
   } = data
-  console.log(nodes)
 
   return (
     <Layout>
@@ -51,7 +51,7 @@ const CrewPage = ({ data }) => {
       </div>
 
       <HeaderSeparator value="terapie" top="30px" />
-      <AboutUs second />
+      <AboutUsTwo />
 
       <Footer white />
     </Layout>

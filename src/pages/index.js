@@ -14,6 +14,7 @@ import Footer from "../components/Footer"
 import HeaderSeparator from "../components/HeaderSeparator"
 
 import { recomendationWrapper, galleryWrapper } from "../styles/home.module.css"
+import AboutUsTwo from "../components/AboutUsTwo"
 
 const HomePage = () => {
   return (
@@ -27,7 +28,7 @@ const HomePage = () => {
         <Recomendations />
       </div>
       <HeaderSeparator value="terapie" top="30px" />
-      <AboutUs second />
+      <AboutUsTwo />
       <div className={galleryWrapper}>
         <HeaderSeparator value="galeria" bg="#e1fe8a" top="-50px" />
         <Gallery />

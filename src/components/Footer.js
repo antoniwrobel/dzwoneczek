@@ -11,8 +11,6 @@ const Footer = (props) => {
   const [white, index] = nodes
   const footerVersion = props.white ? white : index
 
-  console.log(nodes)
-
   return <Image fluid={footerVersion.childImageSharp.fluid} alt="footer" />
 }
 
