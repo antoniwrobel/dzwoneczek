@@ -114,10 +114,10 @@ const AboutUsTwo = () => {
   return (
     <A.Wrapper className={wrapper} id="terapie">
       <A.Articles>
-        <A.Article key={id} className={article}>
+        <A.Article className={article}>
           <A.Content className={`${content} ${lastContent}`}>
             <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
-            <Image fluid={nodes[1].childImageSharp.fluid} alt={alt} className={image} />
+            <Image fluid={nodes[1].childImageSharp.fluid} alt={"background kids"} className={image} />
           </A.Content>
         </A.Article>
       </A.Articles>
