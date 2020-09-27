@@ -10,7 +10,7 @@ import { container } from "../styles/thanks.module.css"
 const OfferPage = () => {
   return (
     <Layout>
-      <SEO title="Fitkids | wiadomość wysłana" />
+      <SEO title="Dzwoneczek | wiadomość wysłana" />
       <Hero />
       <D.Container className={container}>
         <h2>Dziękujemy za wysłanie wiadomości!</h2>

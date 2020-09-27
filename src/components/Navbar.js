@@ -71,10 +71,7 @@ const Navbar = () => {
         <img src={logoImg} alt="company logo" className={mobileImg} />
       </Link>
 
-      <div
-        className={`${icon} ${active ? activeClass : ""}`}
-        onClick={() => setActive(!active)}
-      >
+      <div className={`${icon} ${active ? activeClass : ""}`} onClick={() => setActive(!active)}>
         <div className={menu} />
       </div>
 
@@ -82,10 +79,7 @@ const Navbar = () => {
         <ul className={list}>{pages.map(handleNavPages)}</ul>
       </nav>
 
-      <div
-        className={`${mobileMenu} ${active ? visible : ""}`}
-        onClick={() => setActive(false)}
-      >
+      <div className={`${mobileMenu} ${active ? visible : ""}`} onClick={() => setActive(false)}>
         <nav className={navbarMobile}>
           <ul className={listMobile}>{pages.map(handleNavPages)}</ul>
         </nav>

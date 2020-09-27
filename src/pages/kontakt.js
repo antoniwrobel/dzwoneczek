@@ -16,7 +16,7 @@ const createDesc = (desc) => ({ __html: desc })
 const ContactPage = () => {
   return (
     <Layout>
-      <SEO title="Fitkids | kontakt" />
+      <SEO title="Dzwoneczek | kontakt" />
       <HeroIndex />
       <HeaderSeparator value="kontakt" />
 
