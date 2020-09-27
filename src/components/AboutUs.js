@@ -72,7 +72,7 @@ const articles = [
     <span>• Sensoplastyka</span>
     <span>• Bajkoterapia</span>
     <span>• Muzykoterapia</span>  
-    <div>
+    </div>
     `,
   },
 ]
