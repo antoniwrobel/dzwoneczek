@@ -12,6 +12,11 @@
   color: #3b3b3b;
 }
 
+.fix {
+  display: flex;
+  flex-direction: column;
+}
+
 .headerSmall {
   color: #504f4f;
   font-size: 40px;

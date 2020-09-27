@@ -12,6 +12,7 @@ import {
   image,
   lastContent,
   article,
+  fix,
 } from "../styles/aboutUs.module.css"
 
 const PINK = "#f67685"
@@ -53,8 +54,6 @@ const articles = [
     id: 2,
     title: "Nasza oferta",
     alt: "kids having fun",
-    description: `
-    `,
   },
 ]
 
@@ -90,7 +89,7 @@ const AboutUs = ({ second }) => {
                       <br />
                       <br />
                       <strong>Lista prowadzonych przez nas terapii:</strong>
-                      <div style={{ display: "flex", flexDirection: "column" }}>
+                      <div className={fix}>
                         <span>• Terapia psychologiczna</span>
                         <span>• Terapia logopedyczna</span>
                         <span>• Terapia integracji sensorycznej</span>
