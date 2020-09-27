@@ -12,7 +12,6 @@ import {
   image,
   lastContent,
   article,
-  fix,
 } from "../styles/aboutUs.module.css"
 
 const PINK = "#f67685"
@@ -54,6 +53,29 @@ const articles = [
     id: 2,
     title: "Nasza oferta",
     alt: "kids having fun",
+    description: `<strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
+    oferuje dzieciom niepełnosprawnym szereg terapii
+    prowadzonych przez wykfalifikowany personel.
+    <br>
+    <br>
+
+    <strong>Lista prowadzonych przez nas terapii:</strong>
+    
+    <ul>
+      <li>• Terapia psychologiczna</li>
+      <li>• Terapia logopedyczna</li>
+      <li>• Terapia integracji sensorycznej</li>
+      <li>• Fizjoterapia</li>
+      <li>• Terapia pedagogiczna</li>
+      <li>• Terapia behawioralna</li>
+      <li>• Terapia ręki</li>
+      <li>• Dogoterapia</li>
+      <li>• Trening umiejętności społecznych</li>
+      <li>• Sensoplastyka</li>
+      <li>• Bajkoterapia</li>
+      <li>• Muzykoterapia</li>
+    </ul>
+    `,
   },
 ]
 
@@ -65,48 +87,17 @@ const AboutUs = ({ second }) => {
     allFile: { nodes },
   } = data
 
-  console.log(nodes)
   return (
     <A.Wrapper className={wrapper} id={second ? "terapie" : "o-nas"}>
       <A.Articles>
         {articles.map(({ id, title, description, alt }, index) => {
           if (!second && index === 1) return
           if (second && index === 0) return
-
           return (
             <A.Article key={id} className={article}>
               <A.Content className={`${content} ${second ? lastContent : null}`}>
-                {index === 0 ? (
-                  <>
-                    <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
-                    <Image fluid={nodes[0].childImageSharp.fluid} alt={alt} className={image} />
-                  </>
-                ) : (
-                  <>
-                    <A.Description className={desc}>
-                      <strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
-                      oferuje dzieciom niepełnosprawnym szereg terapii prowadzonych przez wykfalifikowany personel.
-                      <br />
-                      <br />
-                      <strong>Lista prowadzonych przez nas terapii:</strong>
-                      <div className={fix}>
-                        <span>• Terapia psychologiczna</span>
-                        <span>• Terapia logopedyczna</span>
-                        <span>• Terapia integracji sensorycznej</span>
-                        <span>• Fizjoterapia</span>
-                        <span>• Terapia pedagogiczna</span>
-                        <span>• Terapia behawioralna</span>
-                        <span>• Terapia ręki</span>
-                        <span>• Dogoterapia</span>
-                        <span>• Trening umiejętności społecznych</span>
-                        <span>• Sensoplastyka</span>
-                        <span>• Bajkoterapia</span>
-                        <span>• Muzykoterapia</span>
-                      </div>
-                    </A.Description>
-                    <Image fluid={nodes[1].childImageSharp.fluid} alt={alt} className={image} />
-                  </>
-                )}
+                <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
+                <Image fluid={nodes[index].childImageSharp.fluid} alt={alt} className={image} />
               </A.Content>
             </A.Article>
           )
