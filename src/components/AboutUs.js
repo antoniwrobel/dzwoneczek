@@ -53,26 +53,7 @@ const articles = [
     id: 2,
     title: "Nasza oferta",
     alt: "kids having fun",
-    description: `<strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
-    oferuje dzieciom niepełnosprawnym szereg terapii
-    prowadzonych przez wykfalifikowany personel.
-    <br/>
-    <br/>
-    <strong>Lista prowadzonych przez nas terapii:</strong>
-    <div style="display: flex; flex-direction: column;">
-    <span>• Terapia psychologiczna</span>
-    <span>• Terapia logopedyczna</span>
-    <span>• Terapia integracji sensorycznej</span>
-    <span>• Fizjoterapia</span>
-    <span>• Terapia pedagogiczna</span>
-    <span>• Terapia behawioralna</span>
-    <span>• Terapia ręki</span>
-    <span>• Dogoterapia</span>
-    <span>• Trening umiejętności społecznych</span>
-    <span>• Sensoplastyka</span>
-    <span>• Bajkoterapia</span>
-    <span>• Muzykoterapia</span>  
-    </div>
+    description: `
     `,
   },
 ]
@@ -95,8 +76,37 @@ const AboutUs = ({ second }) => {
           return (
             <A.Article key={id} className={article}>
               <A.Content className={`${content} ${second ? lastContent : null}`}>
-                <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
-                <Image fluid={nodes[index].childImageSharp.fluid} alt={alt} className={image} />
+                {index === 0 ? (
+                  <>
+                    <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
+                    <Image fluid={nodes[index].childImageSharp.fluid} alt={alt} className={image} />
+                  </>
+                ) : (
+                  <>
+                    <A.Description className={desc}>
+                      <strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
+                      oferuje dzieciom niepełnosprawnym szereg terapii prowadzonych przez wykfalifikowany personel.
+                      <br />
+                      <br />
+                      <strong>Lista prowadzonych przez nas terapii:</strong>
+                      <div style={{ display: "flex", flexDirection: "column" }}>
+                        <span>• Terapia psychologiczna</span>
+                        <span>• Terapia logopedyczna</span>
+                        <span>• Terapia integracji sensorycznej</span>
+                        <span>• Fizjoterapia</span>
+                        <span>• Terapia pedagogiczna</span>
+                        <span>• Terapia behawioralna</span>
+                        <span>• Terapia ręki</span>
+                        <span>• Dogoterapia</span>
+                        <span>• Trening umiejętności społecznych</span>
+                        <span>• Sensoplastyka</span>
+                        <span>• Bajkoterapia</span>
+                        <span>• Muzykoterapia</span>
+                      </div>
+                    </A.Description>
+                    <Image fluid={nodes[index].childImageSharp.fluid} alt={alt} className={image} />
+                  </>
+                )}
               </A.Content>
             </A.Article>
           )
