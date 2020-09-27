@@ -53,57 +53,9 @@ const articles = [
     id: 2,
     title: "Nasza oferta",
     alt: "kids having fun",
-    description: `<strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
-    oferuje dzieciom niepełnosprawnym szereg terapii
-    prowadzonych przez wykfalifikowany personel.
-    <br>
-    <br>
-
-    <strong>Lista prowadzonych przez nas terapii:</strong>
-    
-    <ul>
-      <li>• Terapia psychologiczna</li>
-      <li>• Terapia logopedyczna</li>
-      <li>• Terapia integracji sensorycznej</li>
-      <li>• Fizjoterapia</li>
-      <li>• Terapia pedagogiczna</li>
-      <li>• Terapia behawioralna</li>
-      <li>• Terapia ręki</li>
-      <li>• Dogoterapia</li>
-      <li>• Trening umiejętności społecznych</li>
-      <li>• Sensoplastyka</li>
-      <li>• Bajkoterapia</li>
-      <li>• Muzykoterapia</li>
-    </ul>
-    `,
+    description: ``,
   },
 ]
-
-const description = `<strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
-oferuje dzieciom niepełnosprawnym szereg terapii
-prowadzonych przez wykfalifikowany personel.
-<br>
-<br>
-
-<strong>Lista prowadzonych przez nas terapii:</strong>
-
-<ul>
-  <li>• Terapia psychologiczna</li>
-  <li>• Terapia logopedyczna</li>
-  <li>• Terapia integracji sensorycznej</li>
-  <li>• Fizjoterapia</li>
-  <li>• Terapia pedagogiczna</li>
-  <li>• Terapia behawioralna</li>
-  <li>• Terapia ręki</li>
-  <li>• Dogoterapia</li>
-  <li>• Trening umiejętności społecznych</li>
-  <li>• Sensoplastyka</li>
-  <li>• Bajkoterapia</li>
-  <li>• Muzykoterapia</li>
-</ul>
-`
-
-const createDesc = (desc) => ({ __html: desc })
 
 const AboutUsTwo = () => {
   const data = useStaticQuery(query)
@@ -116,7 +68,27 @@ const AboutUsTwo = () => {
       <A.Articles>
         <A.Article className={article}>
           <A.Content className={`${content} ${lastContent}`}>
-            <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
+            <A.Description className={desc}>
+              <strong>Prywatne Przedszkole Terapeutyczne „Dzwoneczek” </strong>
+              oferuje dzieciom niepełnosprawnym szereg terapii prowadzonych przez wykfalifikowany personel.
+              <br />
+              <br />
+              <strong>Lista prowadzonych przez nas terapii:</strong>
+              <ul>
+                <li>• Terapia psychologiczna</li>
+                <li>• Terapia logopedyczna</li>
+                <li>• Terapia integracji sensorycznej</li>
+                <li>• Fizjoterapia</li>
+                <li>• Terapia pedagogiczna</li>
+                <li>• Terapia behawioralna</li>
+                <li>• Terapia ręki</li>
+                <li>• Dogoterapia</li>
+                <li>• Trening umiejętności społecznych</li>
+                <li>• Sensoplastyka</li>
+                <li>• Bajkoterapia</li>
+                <li>• Muzykoterapia</li>
+              </ul>
+            </A.Description>
             <Image fluid={nodes[1].childImageSharp.fluid} alt={"background kids"} className={image} />
           </A.Content>
         </A.Article>
