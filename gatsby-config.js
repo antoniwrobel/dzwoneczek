@@ -67,6 +67,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `footer`,
+        path: `${__dirname}/src/images/footer`,
+      },
+    },
+    {
       resolve: `gatsby-source-datocms`,
       options: {
         apiToken: config.DATO_API_TOKEN,

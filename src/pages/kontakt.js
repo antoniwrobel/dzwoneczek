@@ -2,13 +2,14 @@ import React from "react"
 
 import SEO from "../components/Seo"
 import Layout from "./layout"
-import Hero from "../components/Hero"
+import HeroIndex from "../components/HeroIndex"
 
 import Contact from "../components/ContactUs"
 import Footer from "../components/Footer"
 
 import * as K from "../styled/Offer/styles"
 import { wrapper, details, detail, desc as descClass } from "../styles/offer.module.css"
+import HeaderSeparator from "../components/HeaderSeparator"
 
 const createDesc = (desc) => ({ __html: desc })
 
@@ -16,14 +17,11 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO title="Fitkids | kontakt" />
-      <Hero />
-      <K.Wrapper className={wrapper}>
-        <h2>Skontaktuj się z nami</h2>
-        konakt form
-      </K.Wrapper>
+      <HeroIndex />
+      <HeaderSeparator value="kontakt" />
 
-      <Contact title="Formularz kontaktowy" fromContactPage />
-      <Footer />
+      <Contact />
+      <Footer white />
     </Layout>
   )
 }

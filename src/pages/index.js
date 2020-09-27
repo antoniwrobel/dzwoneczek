@@ -33,9 +33,8 @@ const HomePage = () => {
         <HeaderSeparator value="galeria" bg="#e1fe8a" top="-50px" />
         <Gallery />
       </div>
-      {/* <AboutUs /> */}
 
-      {/* <Footer /> */}
+      <Footer />
     </Layout>
   )
 }

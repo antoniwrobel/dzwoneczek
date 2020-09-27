@@ -88,7 +88,7 @@ const AboutUs = ({ second }) => {
   } = data
 
   return (
-    <A.Wrapper className={wrapper} id="o-nas">
+    <A.Wrapper className={wrapper} id={second ? "terapie" : "o-nas"}>
       <A.Articles>
         {articles.map(({ id, title, description, alt }, index) => {
           if (!second && index === 1) return

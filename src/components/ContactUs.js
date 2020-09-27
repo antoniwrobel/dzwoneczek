@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+
 import { navigate } from "gatsby-link"
 import Recaptcha from "react-recaptcha"
 
 import * as C from "../styled/ContactUs/styles"
 import {
   wrapper,
-  header,
   container,
   form,
   inputWrap,
   textareaWrap,
   textarea,
-  inputs,
+  details,
   hidden,
   button,
+  color,
 } from "../styles/contactUs.module.css"
 
 function encode(data) {
@@ -24,14 +24,8 @@ function encode(data) {
 }
 
 const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
-  const fromSpecialPage = fromMenuPage || fromContactPage
   const [state, setState] = useState({})
   const [valid, setValid] = useState(false)
-  const [mobile, setMobile] = useState(false)
-
-  useEffect(() => {
-    setMobile(window.innerWidth <= 1019)
-  }, [])
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value })
@@ -65,16 +59,27 @@ const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
 
   const onloadCallback = () => {}
 
-  const data = useStaticQuery(query)
-
-  const fontSize = fromSpecialPage ? (mobile ? "35" : "48") : mobile ? "50" : "62"
-
   return (
-    <C.Wrapper className={wrapper} bg={!fromSpecialPage && data.file.childImageSharp.fluid.src}>
+    <C.Wrapper className={wrapper}>
       <C.Container className={container}>
-        <C.Header className={header} fontSize={fontSize}>
-          {title || "Skontaktuj się z nami"}
-        </C.Header>
+        <div className={details}>
+          <strong>
+            Prywatne Przedszkole <br />
+            Terapeutyczne „Dzwoneczek”
+          </strong>
+          <div>
+            <span>Łazy 42</span>
+            <span>21-400 Łuków</span>
+          </div>
+          <div className={color}>
+            <span>Telefon: 505 469 748</span> <span>Mail: kontakt@dzwoneczek.lukow.pl</span>
+          </div>
+          <ul>
+            Godziny otwarcia:
+            <li>Pn- Pt: 6:00 - 18:00</li>
+            <li>Sb - N: Nieczynne</li>
+          </ul>
+        </div>
         <C.Form
           name="contact"
           data-netlify="true"
@@ -93,20 +98,20 @@ const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
             </label>
           </p>
 
-          <C.Inputs className={inputs}>
-            <C.InputWrap className={inputWrap}>
-              <label htmlFor="name">Imię i nazwisko:</label>
-              <input type="text" name="name" required onChange={handleChange} />
-            </C.InputWrap>
-            <C.InputWrap className={inputWrap}>
-              <label htmlFor="company">Nazwa firmy:</label>
-              <input type="input" name="company" required onChange={handleChange} />
-            </C.InputWrap>
-            <C.InputWrap className={inputWrap}>
-              <label htmlFor="email">Adres email:</label>
-              <input type="email" name="email" required onChange={handleChange} />
-            </C.InputWrap>
-          </C.Inputs>
+          <C.InputWrap className={inputWrap}>
+            <label htmlFor="name">Imię i nazwisko:</label>
+            <input type="text" name="name" required onChange={handleChange} />
+          </C.InputWrap>
+
+          <C.InputWrap className={inputWrap}>
+            <label htmlFor="email">Adres email:</label>
+            <input type="email" name="email" required onChange={handleChange} />
+          </C.InputWrap>
+          <C.InputWrap className={inputWrap}>
+            <label htmlFor="phone">Numer telefonu:</label>
+            <input type="number" name="phone" required onChange={handleChange} />
+          </C.InputWrap>
+
           <C.InputWrap className={`${inputWrap} ${textareaWrap}`}>
             <label htmlFor="message">Treść zapytania:</label>
             <textarea type="text" name="message" required className={textarea} onChange={handleChange} />
@@ -128,17 +133,5 @@ const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
     </C.Wrapper>
   )
 }
-
-const query = graphql`
-  {
-    file(relativePath: { regex: "/bg_pattern_kontakt/" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 export default ContactUs

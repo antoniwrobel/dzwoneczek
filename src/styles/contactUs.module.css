@@ -21,6 +21,8 @@
   width: 100%;
   padding: 30px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header {
@@ -29,17 +31,39 @@
 }
 
 .form {
+  width: 100%;
   padding: 40px 0 0;
   display: flex;
   flex-direction: column;
+  max-width: 50%;
   align-items: flex-end;
 }
 
 .inputWrap {
   display: flex;
   flex-direction: column;
-  max-width: calc(100% / 3 - 5px);
+  max-width: 100%;
   width: 100%;
+}
+
+.details {
+  width: 100%;
+  max-width: 40%;
+  padding: 50px 0 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  color: #502f19;
+}
+
+.color {
+  color: #e3742d;
+}
+
+.details div {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .textareaWrap {
@@ -47,24 +71,39 @@
 }
 
 .inputWrap label {
-  color: #08374f;
+  color: #502f19;
   font-size: 24px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
-.inputWrap input,
-.textareaWrap textarea {
+.inputWrap input {
   height: 40px;
+  color: #fff;
+  font-size: 21px;
   border-radius: 20px;
-  border: 3px solid #08abff;
+  background: #e3742d;
+  border: 3px solid #e3742d;
   outline: none;
   padding: 5px 10px;
   box-sizing: border-box;
 }
 
-.inputWrap input:focus,
+.textareaWrap textarea {
+  background: #74ac28;
+  border: 3px solid #74ac28;
+  font-size: 21px;
+  border-radius: 20px;
+  outline: none;
+  padding: 5px 10px;
+  color: #fff;
+  box-sizing: border-box;
+}
 .textareaWrap textarea:focus {
-  box-shadow: 0 0 5px 0 #08abff;
+  box-shadow: 0 0 5px 0 #74ac28;
+}
+
+.inputWrap input:focus {
+  box-shadow: 0 0 5px 0 #e3742d;
 }
 
 .inputs {
@@ -85,10 +124,10 @@
 }
 
 .button {
-  box-shadow: 0 4px 0 #2d91c4;
-  background-color: #08abff;
+  box-shadow: 0 4px 0 #502f19;
+  background-color: #502f19;
   border: none;
-  color: #175271;
+  color: #fff;
   font-size: 22px;
   padding: 10px 15px;
   border-radius: 15px;

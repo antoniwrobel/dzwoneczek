@@ -19,6 +19,34 @@
   position: relative;
 }
 
+.crewWrapper {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.crewWrapper li {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.crewWrapper strong {
+  color: #502f19;
+}
+
+.crewWrapper span {
+  color: #496dbe;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.crewWrapper p {
+  font-size: 16px;
+}
+
 @media (max-width: 1019px) {
   .backgroundImg {
     height: 200px !important;
