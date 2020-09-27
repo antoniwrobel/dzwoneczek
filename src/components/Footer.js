@@ -12,12 +12,13 @@ const Footer = (props) => {
 
   const [white, index] = nodes
   const footerVersion = props.white ? white : index
+
   return <Image fluid={footerVersion.childImageSharp.fluid} alt="footer" />
 }
 
 const query = graphql`
   {
-    allFile(filter: { dir: { regex: "/footer/" } }) {
+    allFile(filter: { dir: { regex: "/footer/" } }, sort: { order: DESC, fields: sourceInstanceName }) {
       nodes {
         childImageSharp {
           fluid(quality: 100) {
