@@ -93,6 +93,7 @@ const AboutUs = ({ second }) => {
         {articles.map(({ id, title, description, alt }, index) => {
           if (!second && index === 1) return
           if (second && index === 0) return
+
           return (
             <A.Article key={id} className={article}>
               <A.Content className={`${content} ${second ? lastContent : null}`}>

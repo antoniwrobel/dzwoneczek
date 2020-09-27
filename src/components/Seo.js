@@ -31,10 +31,6 @@ const SEO = ({ title, description, image, swiper, captcha }) => {
 
       {seo.description && <meta name="twitter:description" content={seo.description} />}
 
-      {/* {swiper && (
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"></link>
-      )} */}
-
       <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"></link>
     </Helmet>
     //  highlight-end
