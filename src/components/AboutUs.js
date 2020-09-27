@@ -66,6 +66,7 @@ const AboutUs = ({ second }) => {
     allFile: { nodes },
   } = data
 
+  console.log(nodes)
   return (
     <A.Wrapper className={wrapper} id={second ? "terapie" : "o-nas"}>
       <A.Articles>
@@ -79,7 +80,7 @@ const AboutUs = ({ second }) => {
                 {index === 0 ? (
                   <>
                     <A.Description dangerouslySetInnerHTML={createDesc(description)} className={desc} />
-                    <Image fluid={nodes[index].childImageSharp.fluid} alt={alt} className={image} />
+                    <Image fluid={nodes[0].childImageSharp.fluid} alt={alt} className={image} />
                   </>
                 ) : (
                   <>
@@ -104,7 +105,7 @@ const AboutUs = ({ second }) => {
                         <span>• Muzykoterapia</span>
                       </div>
                     </A.Description>
-                    <Image fluid={nodes[index].childImageSharp.fluid} alt={alt} className={image} />
+                    <Image fluid={nodes[1].childImageSharp.fluid} alt={alt} className={image} />
                   </>
                 )}
               </A.Content>
