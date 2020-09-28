@@ -91,6 +91,10 @@
     max-width: 350px;
   }
 
+  .userDetails {
+    margin-left: 0;
+  }
+
   .wrapper::before,
   .wrapper::after {
     content: none;

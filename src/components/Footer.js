@@ -1,32 +1,18 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
+
+import footerWhite from "../images/main/footer_white.jpg"
+import footerGreen from "../images/main/footer_green.jpg"
+
+import { footerWrapper, img } from "../styles/footer.module.css"
 
 const Footer = (props) => {
-  const data = useStaticQuery(query)
-  const {
-    allFile: { nodes },
-  } = data
+  const footerVersion = props.white ? footerWhite : footerGreen
 
-  const [white, index] = nodes
-  const footerVersion = props.white ? white : index
-
-  return <Image fluid={footerVersion.childImageSharp.fluid} alt="footer" />
+  return (
+    <div className={footerWrapper}>
+      <img src={footerVersion} className={img} alt="footer" />
+    </div>
+  )
 }
-
-const query = graphql`
-  {
-    allFile(filter: { dir: { regex: "/footer/" } }, sort: { fields: relativePath, order: ASC }) {
-      nodes {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-        id
-      }
-    }
-  }
-`
 
 export default Footer

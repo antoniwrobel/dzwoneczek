@@ -17,7 +17,7 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO title="Dzwoneczek | kontakt" />
-      <HeroIndex />
+      <HeroIndex small />
       <HeaderSeparator value="kontakt" />
 
       <Contact />
