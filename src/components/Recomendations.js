@@ -23,43 +23,24 @@ const defParams = {
   loop: true,
 }
 
-function debounce(fn, ms) {
-  let timer
-  return (_) => {
-    clearTimeout(timer)
-    timer = setTimeout((_) => {
-      timer = null
-      fn.apply(this, arguments)
-    }, ms)
-  }
-}
-
 const Recomendations = () => {
+  const [mobile, setMobile] = useState(false)
   const [params, setParams] = useState({})
+  const [done, setDone] = useState(false)
 
-  const [dimensions, setDimensions] = React.useState({
-    height: window.innerHeight,
-    width: window.innerWidth,
-  })
+  useEffect(() => {
+    setMobile(window.innerWidth <= 1019)
+    setParams({ ...defParams })
+    setDone(true)
+  }, [])
 
-  React.useEffect(() => {
-    const debouncedHandleResize = debounce(function handleResize() {
-      setDimensions({
-        height: window.innerHeight,
-        width: window.innerWidth,
-      })
-    }, 1000)
-
-    window.addEventListener("resize", debouncedHandleResize)
+  useEffect(() => {
+    if (!done) return
     setParams({
       ...defParams,
-      slidesPerView: dimensions.width <= 1019 ? 1 : 3,
+      slidesPerView: mobile ? 1 : 3,
     })
-
-    return (_) => {
-      window.removeEventListener("resize", debouncedHandleResize)
-    }
-  }, [])
+  }, [mobile])
 
   const {
     allDatoCmsReview: { nodes },
