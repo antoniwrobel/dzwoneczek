@@ -95,6 +95,7 @@
     width: 70px;
     height: 75px;
     cursor: pointer;
+    z-index: 9999999999;
   }
 
   .mobileLink {
@@ -169,7 +170,7 @@
     will-change: transform;
     width: 100%;
     background: #fff;
-    top: 75px;
+    top: -5px;
     display: flex;
     z-index: 99999999;
     max-width: 100%;
@@ -180,6 +181,7 @@
   }
 
   .visible {
+    top: -5px;
     right: 0;
     transform: translateX(0);
   }
@@ -204,6 +206,6 @@
   }
 
   .listMobile a {
-    color: #117598;
+    color: #5a331a;
   }
 }

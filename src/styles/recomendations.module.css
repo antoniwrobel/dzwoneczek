@@ -84,11 +84,12 @@
 @media (max-width: 1019px) {
   .wrapper {
     margin-top: 0px;
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 20px;
     box-sizing: border-box;
-    box-shadow: 0 0 20px 0 #dedede;
+    box-shadow: 0 0 20px 0 #5a331a;
     max-width: 350px;
+    border-radius: 5px;
   }
 
   .userDetails {
