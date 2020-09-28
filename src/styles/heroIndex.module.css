@@ -2,8 +2,8 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 1920px;
   display: flex;
-  /* min-height: 100vh; */
   height: 1012px;
 }
 
@@ -22,6 +22,7 @@
 
 .imageMobile {
   width: 100%;
+  display: none;
 }
 
 .barImage {
@@ -119,6 +120,10 @@
   }
   .separator::after {
     top: 10px;
+  }
+
+  .imageMobile {
+    display: block !important;
   }
 
   .headerImageMobile {
