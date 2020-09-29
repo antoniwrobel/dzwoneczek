@@ -5,6 +5,7 @@
   max-width: 1920px;
   display: flex;
   height: 1012px;
+  margin: 0 auto;
 }
 
 .shortVersion {
