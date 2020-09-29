@@ -43,17 +43,11 @@
   font-family: Anton;
   font-size: 32px;
   position: relative;
-  top: -60px;
+  top: -65px;
   font-weight: 600;
 }
 
-@media (min-width: 1920px) {
-  .titleHeader {
-    top: -65px;
-  }
-}
-
-@media (max-width: 1356px) {
+@media (max-width: 1019px) {
   .wrapper {
     display: none;
   }
