@@ -9,6 +9,8 @@ import AboutUs from "../components/AboutUs"
 import Recomendations from "../components/Recomendations"
 import Gallery from "../components/Gallery"
 
+import PhotosMobile from "../components/PhotosMobile"
+
 import Footer from "../components/Footer"
 
 import HeaderSeparator from "../components/HeaderSeparator"
@@ -21,6 +23,7 @@ const HomePage = () => {
     <Layout>
       <SEO title="Dzwoneczek | przedszkole terapeutyczne" swiper captcha />
       <Hero />
+      <PhotosMobile />
       <HeaderSeparator value="o nas" />
       <AboutUs />
       <div className={recomendationWrapper}>

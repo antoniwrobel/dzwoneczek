@@ -141,12 +141,17 @@
   .container {
     max-width: 100%;
     padding: 10px 10px;
+    flex-direction: column;
   }
 
   .form {
     padding: 20px 0 0;
+    max-width: 100%;
   }
 
+  .details {
+    max-width: 100%;
+  }
   .inputs {
     flex-direction: column;
   }

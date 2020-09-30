@@ -47,8 +47,27 @@
   font-size: 16px;
 }
 
+.mobilePhotos {
+  display: none;
+}
+
 @media (max-width: 1019px) {
   .backgroundImg {
     height: 200px !important;
+  }
+
+  .mobilePhotos {
+    display: flex;
+    padding: 50px 20px;
+    box-sizing: border-box;
+  }
+
+  .slogan {
+    position: absolute;
+    bottom: 30px;
+    font-size: 33px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
   }
 }

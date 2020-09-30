@@ -58,6 +58,10 @@
   max-width: fit-content;
 }
 
+.imgMobile {
+  display: none;
+}
+
 @media (max-width: 1019px) {
   .container {
     max-width: 100%;
@@ -74,5 +78,17 @@
 
   .column div {
     margin: 20px 0;
+  }
+  .footerWrapper {
+    height: auto;
+  }
+
+  .imgMobile {
+    display: block;
+    width: 100%;
+  }
+
+  .img {
+    display: none;
   }
 }
