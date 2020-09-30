@@ -80,7 +80,7 @@
     margin: 20px 0;
   }
   .footerWrapper {
-    height: auto;
+    height: initial !important;
   }
 
   .imgMobile {
