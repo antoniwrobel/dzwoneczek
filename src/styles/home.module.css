@@ -58,13 +58,13 @@
 
   .mobilePhotos {
     display: flex;
-    padding: 50px 20px;
+    padding: 20px 50px;
     box-sizing: border-box;
   }
 
   .slogan {
     position: absolute;
-    bottom: 30px;
+    bottom: 25px;
     font-size: 33px;
     font-weight: bold;
     width: 100%;
