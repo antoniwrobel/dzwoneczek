@@ -127,10 +127,17 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .floater {
+    display: none;
+  }
+}
+
 @media (max-width: 1019px) {
   .separator {
     font-size: 32px;
   }
+
   .separator::after {
     top: 10px;
   }
