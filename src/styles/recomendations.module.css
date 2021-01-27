@@ -1,6 +1,6 @@
 .wrapper {
-  width: 100%;
   padding: 0 30px;
+  text-align: center;
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -8,11 +8,8 @@
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+
   z-index: 999;
-  width: calc(100% - 40px);
 }
 
 .upper {
@@ -81,7 +78,7 @@
   max-width: 75%;
 }
 
-@media (max-width: 1019px) {
+/* @media (max-width: 1019px) {
   .wrapper {
     margin-top: 0px;
     margin: 0px auto;
@@ -108,4 +105,4 @@
   .upper {
     flex-direction: column;
   }
-}
+} */

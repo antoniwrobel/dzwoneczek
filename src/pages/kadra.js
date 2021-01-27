@@ -46,7 +46,7 @@ const CrewPage = ({ data }) => {
         </ul>
       </div>
       <div className={recomendationWrapper}>
-        <HeaderSeparator value="rekomendacje" bg="#fff498" top="-50px" />
+        <HeaderSeparator value="Znajdz nas na FB" bg="#fff498" top="-50px" />
         <Recomendations />
       </div>
 

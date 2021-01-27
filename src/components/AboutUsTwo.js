@@ -12,6 +12,7 @@ import {
   image,
   lastContent,
   article,
+  descLastCustom,
 } from "../styles/aboutUs.module.css"
 
 const PINK = "#f67685"
@@ -92,6 +93,14 @@ const AboutUsTwo = () => {
             <Image fluid={nodes[1].childImageSharp.fluid} alt={"background kids"} className={image} />
           </A.Content>
         </A.Article>
+        <A.Content>
+          <A.Description className={descLastCustom}>
+            <h3>
+              Najważniejsze jest dobro dziecka, dlatego dzieci posiądajace orzeczenie o kształceniu specjalnym{" "}
+              <strong>NIE PŁACĄ CZESNEGO</strong> oraz <strong>WSZYSTKIE </strong>teriapie są <strong>BEZPŁATNE</strong>
+            </h3>
+          </A.Description>
+        </A.Content>
       </A.Articles>
     </A.Wrapper>
   )

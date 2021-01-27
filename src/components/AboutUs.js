@@ -12,6 +12,7 @@ import {
   image,
   lastContent,
   article,
+  descLast,
 } from "../styles/aboutUs.module.css"
 
 const PINK = "#f67685"
@@ -58,6 +59,25 @@ const articles = [
   },
 ]
 
+const lastArticle = `<strong>ZAPRASZAMY WSZYSTKIE DZIECI W WIEKU 2,5- 6 lat </strong> <br/><br/>
+      <h3>
+      Przedszkole Dzwoneczek jesteśmy dla dzieci.
+      </h3>
+      <br/>
+      Prywatne Przedszkole Terapeutyczne „Dzwoneczek”  to miejsce w którym dzieci są zadbane i bezpieczne. Wysoko wykwalifikowana kadra zapewnia genialne przygotowanie do dalszej edukacji twojego dziecka. 
+      <br/><br/>
+      Naszym celem jest dbanie o wszechstronny rozwój. Do każdego dziecka podchodzimy indywidualnie.  
+      <br/><br/>
+      W naszym przedszkolu twoje dziecko na pewno nauczy się co to jest tolerancja, pasja, szacunek, wrażliwość oraz kreatywność. Oferujemy pełną gamę zajęć - od zabawy, poprzez zajęcia teatralne, plastyczne, rytmiczno- muzyczne, naukę języka angielskiego, gimnastykę korekcyjną.
+      <br/><br/> 
+      Każde dziecko znajdzie u nas zrozumienie, pomoc oraz wsparcie, a także kompleksową opiekę, i terapię specjalistów. 
+      Jeśli pojawi się jakikolwiek problem, jesteśmy. 
+      <br/><br/> 
+      Nasza palcówka specjalizuje się również w terapii i edukacji dzieci z zaburzeniami ze spektrum autyzmu, zespołem Aspergera, zespołem Downa i innymi dysfunkcjami rozwojowymi. Oferujemy wachlarz terapii, indywidualnie dostosowany do potrzeb każdego dziecka. W terapii dzieci naszym priorytetem jest zbudowanie jak najlepszej relacji i zapewnienie im poczucia bezpieczeństwa. Ważnym aspektem jest integracja dzieci autystycznych z rówieśnikami. 
+      <br/><br/> 
+      W SOBOTY przeprowadzamy dodatkowe zajęcia edukacyjne dla wszystkich przedszkolaków.
+`
+
 const createDesc = (desc) => ({ __html: desc })
 
 const AboutUs = ({ second }) => {
@@ -81,6 +101,13 @@ const AboutUs = ({ second }) => {
             </A.Article>
           )
         })}
+      </A.Articles>
+      <A.Articles>
+        <A.Article className={article}>
+          <A.Content className={lastContent}>
+            <A.Description dangerouslySetInnerHTML={createDesc(lastArticle)} className={descLast} />
+          </A.Content>
+        </A.Article>
       </A.Articles>
     </A.Wrapper>
   )

@@ -27,7 +27,7 @@ const HomePage = () => {
       <HeaderSeparator value="o nas" />
       <AboutUs />
       <div className={recomendationWrapper}>
-        <HeaderSeparator value="rekomendacje" bg="#fff498" top="-50px" />
+        <HeaderSeparator value="Znajdz nas na FB" bg="#fff498" top="-50px" />
         <Recomendations />
       </div>
       <HeaderSeparator value="terapie" top="30px" />

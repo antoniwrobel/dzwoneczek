@@ -68,15 +68,15 @@ const ContactUs = ({ title, fromContactPage, fromMenuPage }) => {
             Terapeutyczne „Dzwoneczek”
           </strong>
           <div>
-            <span>Łazy 42</span>
+            <span>Łazy 42e</span>
             <span>21-400 Łuków</span>
           </div>
           <div className={color}>
-            <span>Telefon: 505 469 748</span> <span>Mail: kontakt@dzwoneczek.lukow.pl</span>
+            <span>Telefon: 505 469 748</span> <span>Mail: terapia61@onet.pl</span>
           </div>
           <ul>
             Godziny otwarcia:
-            <li>Pn- Pt: 6:00 - 18:00</li>
+            <li>Pn- Pt: 6:30 - 17:00</li>
             <li>Sb - N: Nieczynne</li>
           </ul>
         </div>

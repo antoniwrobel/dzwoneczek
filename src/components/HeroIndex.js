@@ -12,6 +12,7 @@ import {
   shortVersion,
   imageMobile,
   headerImageMobile,
+  floater,
 } from "../styles/heroIndex.module.css"
 
 import header from "../images/main/header.jpg"
@@ -21,6 +22,11 @@ import headerMobile from "../images/main/mobile_top.jpg"
 const Hero = ({ small }) => {
   return (
     <>
+      <a href="tel:+48505 469 748" className={floater}>
+        <strong>505 469 748</strong>
+        <span>Jeżeli masz jakiekolwiek pytania</span>
+        <strong>ZADZWOŃ TERAZ</strong>
+      </a>
       <div className={`${headerImage} ${headerImageMobile} ${small && shortVersion} `}>
         <img src={small ? headerShort : header} className={image} alt="background" />
         <img src={headerMobile} className={imageMobile} alt="background" />
