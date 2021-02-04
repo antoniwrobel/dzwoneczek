@@ -8,7 +8,7 @@ export const Article = styled.article``
 
 export const HeaderSmall = styled.h3``
 
-export const Description = styled.p``
+export const Description = styled.div``
 
 export const Articles = styled.div``
 

@@ -34,16 +34,16 @@ const articles = [
     zbudowanie jak najlepszej relacji i zapewnienie im
     poczucia bezpieczeństwa. Ważnym asektem jest
     integracja dzieci autystycznych z rówieśnikami.
-    <br/>
-    <br/>
+    <br>
+    <br>
     Absolwenci naszego przedszkola często trafiają do
     szkół masowych bez orzeczenia o potrzebie
     kształcenia specjalnego. <strong style="color: ${GREEN};">Kompleksowa terapia 
     obejmuje: </strong>psychologa, pedagogów specjalnych, 
     terapeutę integracji sensorycznej, logopedę, 
     terapeutów behawioralnych oraz fizjoterapeutę. 
-    <br/>
-    <br/>
+    <br>
+    <br>
     Wśród zajęć dodatkowych <strong style="color :${BLUE}">wspomagającytch 
     rozwój dzieci</strong> oferujemy: dogoterapię, język angielski
     zajęcia sportowe z cyklu „Przedszkoliada”, 
