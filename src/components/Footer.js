@@ -1,10 +1,10 @@
 import React from "react"
 
-import footerWhite from "../images/main/main.jpg"
 import footerGreen from "../images/main/main.jpg"
+import footerWhite from "../images/main/main1.jpg"
 
-import footerWhiteMobile from "../images/main/main.jpg"
-import footerGreenMobile from "../images/main/main.jpg"
+import footerGreenMobile from "../images/main/main_mobile.jpg"
+import footerWhiteMobile from "../images/main/main_mobile1.jpg"
 
 import { footerWrapper, img, imgMobile } from "../styles/footer.module.css"
 

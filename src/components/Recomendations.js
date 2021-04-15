@@ -2,6 +2,8 @@ import React from "react" // , { useEffect, useState }
 // import { graphql, useStaticQuery } from "gatsby"
 // import Image from "gatsby-image"
 
+import fb from "../images/main/fb.png"
+
 import {
   wrapper,
   // card,
@@ -54,7 +56,11 @@ const Recomendations = () => {
   // if (!Object.keys(params).length) return <></>
 
   return (
-    <R.Wrapper className={wrapper}>FACEBOOK</R.Wrapper>
+    <R.Wrapper className={wrapper}>
+      <a href="https://www.facebook.com/przedszkoledzwoneczek.lazy" target="_blank">
+        <img src={fb} alt="facebook page" style={{ maxWidth: "110px" }} />
+      </a>
+    </R.Wrapper>
     // <R.Wrapper className={wrapper}>
     //   <R.SwiperEl {...params} className={swiper}>
     //     {nodes.map(({ originalId, fullName, role, rating, description }, index) => {
