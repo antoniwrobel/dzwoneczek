@@ -29,8 +29,13 @@ const Gallery = () => {
           {nodes.map(({ childImageSharp: { fluid }, id }, index) => {
             return (
               <SwiperSlide key={id}>
-                <div style={{ maxHeight: "100%", height: "600px" }}>
-                  <Image fluid={fluid} key={id} style={{ maxHeight: "100%" }} imgStyle={{ objectFit: "contain" }} />
+                <div style={{ maxHeight: "100%", height: "600px", display: "flex" }}>
+                  <Image
+                    fluid={fluid}
+                    key={id}
+                    style={{ maxHeight: "100%", width: "100%" }}
+                    imgStyle={{ objectFit: "contain" }}
+                  />
                 </div>
               </SwiperSlide>
             )
